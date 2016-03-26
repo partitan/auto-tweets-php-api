@@ -49,4 +49,18 @@ function auto_follow($toa)
 
 // Follow yours followers 
 auto_follow($tweet);
+
+// search users and follow
+function searchAndFollow($tweet, $search = "fxstar"){
+	$users = $tweet->get('users/search', array('q' => 'fxstar'));
+	$a = json_decode($users, true);
+	foreach ($a as $key => $user) {
+		echo $user['screen_name']." Follow user <br>";
+		$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
+	}
+	//print_r($a);
+}
+
+// search and follow
+searchAndFollow($tweet, "fxstar");
 ?>
