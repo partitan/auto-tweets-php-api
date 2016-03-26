@@ -22,7 +22,7 @@ echo $tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER
 echo $tweet->post('direct_messages/new', array('screen_name' => 'SCREEN-NAME-USER', 'text' => 'Hell ha wrrrrrrr......'));
 
 // New Tweet message
-$tweetMessage = 'This is a tweet to my Twitter account via PHP. PHP API the best ...';
+$tweetMessage = 'This is a tweet to my Twitter account via PHP @fxstareu. PHP API the best ...';
 
 // Check for 140 characters
 if(strlen($tweetMessage) <= 140)
