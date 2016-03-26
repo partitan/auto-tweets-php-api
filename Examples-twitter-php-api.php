@@ -1,5 +1,6 @@
 <?php
-// Twiter API PHP https://github.com/pedroventura/pv-auto-tweets
+// Orginal Twiter API PHP https://github.com/pedroventura/pv-auto-tweets
+// Twitter API PHP examples https://github.com/fxstar/auto-tweets-php-api
 
 $consumerKey    = 'Consumer-Key';
 $consumerSecret = 'Consumer-Secret';
