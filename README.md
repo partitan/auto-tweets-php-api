@@ -5,6 +5,8 @@ Twitter PHP API
 Examples-twitter-php-api.php
 - Send tweets
 - send private messages
+- get followers
+- get friends
 - search users by words and follow
 - auto follow yours followers
 
