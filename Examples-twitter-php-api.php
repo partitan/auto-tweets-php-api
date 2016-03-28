@@ -53,7 +53,7 @@ auto_follow($tweet);
 
 // search users and follow
 function searchAndFollow($tweet, $search = "fxstar"){
-	$users = $tweet->get('users/search', array('q' => 'fxstar'));
+	$users = $tweet->get('users/search', array('q' => $search));
 	$a = json_decode($users, true);
 	foreach ($a as $key => $user) {
 		echo $user['screen_name']." Follow user <br>";
