@@ -19,6 +19,16 @@ echo $tweet->get('followers/ids', array('screen_name' => 'YOUR-SCREEN-NAME-USER'
 echo $tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER'));
 //$tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER', 'cursor' => 9999999999));
 
+// send message to all followers
+$out="";
+$t = json_decode($tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER')), true);
+foreach ($t['users'] as $user) {
+    $tweet->post('direct_messages/new', array('screen_name' => $user['screen_name'], 'text' => 'Hello!'));
+    $out = $out."Username ".$user['screen_name']." ID ".$user['id_str']."<br>";
+}
+// save to file
+file_put_contents('followers.txt', $out);
+
 // send private message
 echo $tweet->post('direct_messages/new', array('screen_name' => 'SCREEN-NAME-USER', 'text' => 'Hell ha wrrrrrrr......'));
 
