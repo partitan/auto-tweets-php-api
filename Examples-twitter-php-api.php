@@ -74,4 +74,34 @@ function searchAndFollow($tweet, $search = "fxstar"){
 
 // search and follow
 searchAndFollow($tweet, "fxstar");
+
+
+// all followers to file with send private messages 
+// (request limit 180 per 15 min)
+$out="";
+$cursor = "-1";
+
+$t = json_decode($tweet->get('followers/list', array('screen_name' => 'microsoft')), true);
+if (isset($t['errors'])) {
+	echo "ERRORS !!!!! ";
+	print_r($t['errors']);
+	die();
+}
+
+$cursor = $t['next_cursor_str'];
+while ($cursor != 0) {
+	foreach ($t['users'] as $user) {
+	    //$tweet->post('direct_messages/new', array('screen_name' => $user['screen_name'], 'text' => 'Hello!'));
+	    $out = $out.$user['screen_name']."<br>";
+	}
+	$out = $out."NEXTPART";
+	sleep(1);	
+	$t = json_decode($tweet->get('followers/list', array('screen_name' => 'microsoft', 'cursor' => $cursor)),true);
+	$cursor = $t['next_cursor_str'];
+}
+
+echo $out;
+// save to file
+file_put_contents('users.txt', $out);
+
 ?>
