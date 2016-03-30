@@ -11,17 +11,17 @@ $oAuthSecret    = 'OAuth Secret';
 require_once('twitteroauth.php');
 $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecret);
 
-// get followers id list
-echo $tweet->get('followers/ids', array('screen_name' => 'YOUR-SCREEN-NAME-USER'));
+// get followers id list last 5000
+echo $tweet->get('followers/ids', array('screen_name' => 'YOUR-SCREEN-NAME-USER', 'count'=> 5000));
 //$tweet->get('followers/ids', array('screen_name' => 'YOUR-SCREEN-NAME-USER', 'cursor' => 9999999999));
 
-// get followers list with name
-echo $tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER'));
+// get followers list with name last 200
+echo $tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER', 'count' => 200));
 //$tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER', 'cursor' => 9999999999));
 
-// send message to all followers
+// send message to followers last 200
 $out="";
-$t = json_decode($tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER')), true);
+$t = json_decode($tweet->get('followers/list', array('screen_name' => 'YOUR-SCREEN-NAME-USER', 'count' => 200)), true);
 foreach ($t['users'] as $user) {
     $tweet->post('direct_messages/new', array('screen_name' => $user['screen_name'], 'text' => 'Hello!'));
     $out = $out."Username ".$user['screen_name']." ID ".$user['id_str']."<br>";
@@ -62,7 +62,7 @@ function auto_follow($toa)
 auto_follow($tweet);
 
 // search users and follow
-function searchAndFollow($tweet, $search = "fxstar"){
+function searchAndFollow($tweet, $search = "fxstareu"){
 	$users = $tweet->get('users/search', array('q' => $search));
 	$a = json_decode($users, true);
 	foreach ($a as $key => $user) {
@@ -73,7 +73,7 @@ function searchAndFollow($tweet, $search = "fxstar"){
 }
 
 // search and follow
-searchAndFollow($tweet, "fxstar");
+searchAndFollow($tweet, "fxstareu");
 
 
 // all followers to file with send private messages 
@@ -81,7 +81,7 @@ searchAndFollow($tweet, "fxstar");
 $out="";
 $cursor = "-1";
 
-$t = json_decode($tweet->get('followers/list', array('screen_name' => 'microsoft')), true);
+$t = json_decode($tweet->get('followers/list', array('screen_name' => 'microsoft', 'count' => 200)), true);
 if (isset($t['errors'])) {
 	echo "ERRORS !!!!! ";
 	print_r($t['errors']);
@@ -96,7 +96,7 @@ while ($cursor != 0) {
 	}
 	$out = $out."NEXTPART";
 	sleep(1);	
-	$t = json_decode($tweet->get('followers/list', array('screen_name' => 'microsoft', 'cursor' => $cursor)),true);
+	$t = json_decode($tweet->get('followers/list', array('screen_name' => 'microsoft', 'cursor' => $cursor, 'count' => 200)),true);
 	$cursor = $t['next_cursor_str'];
 }
 
