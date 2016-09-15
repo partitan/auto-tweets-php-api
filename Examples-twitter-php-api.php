@@ -104,4 +104,33 @@ echo $out;
 // save to file
 file_put_contents('users.txt', $out);
 
+
+
+// Geo location town lat long
+// search geo
+function searchGeoLatLong($tweet, $lat = "37.7821120598956", $long = "-122.400612831116", $max = "500"){
+	$users = $tweet->get('geo/search', array('lat' => $lat, 'long' => $long, 'max_results' => $max));
+	$a = json_decode($users, true);
+	echo "<pre>";
+	print_r($a);
+	foreach ($a as $key => $user) {
+		//echo $user['screen_name']." Follow user <br>";
+		//$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
+	}
+	
+}
+function searchGeoTown($tweet, $search = "NewYork", $max = "500"){
+	$users = $tweet->get('geo/search', array('query' => $search, 'max_results' => $max));
+	$a = json_decode($users, true);
+	echo "<pre>";
+	print_r($a);
+	foreach ($a as $key => $user) {
+		//echo $user['screen_name']." Follow user <br>";
+		//$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
+	}
+	
+}
+// search and follow
+searchGeoTown($tweet, "warszawa");
+searchGeoLatLong($tweet, "37.7821120598956", "-122.400612831116");
 ?>
