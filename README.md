@@ -24,4 +24,4 @@ Orginal autor page:
 http://www.webinfopedia.com/auto-tweet-with-oauth-in-php.html
 
 Have a nice day
-fxstar.eu
+[Strony internetowe fxstar.eu](https://fxstar.eu)
