@@ -174,7 +174,6 @@ function searchUser($tweet, $qu = "fxstareu"){
 //searchGeoTownAndFollow($tweet, "warszawa");
 //searchGeoLatLongAndFollow($tweet, "37.7821120598956", "-122.400612831116");
 
-
-//$tweet->post('statuses/update', array('status' => 'here the content of your tweet, you can add hashtags or links'));
-echo "Hello";
+$tweet->post('statuses/update', array('status' => 'Php twitter api @fxstareu https://fxstar.eu'));
+echo "OK";
 ?>
