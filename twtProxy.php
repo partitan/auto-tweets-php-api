@@ -12,6 +12,10 @@ require_once('twitteroauth.php');
 $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecret);
 
 
+echo $tweet->post('direct_messages/new', array('screen_name' => 'krungthepppCXP', 'text' => 'Hell ha wrrrrrrr......'));
+// New Tweet message
+echo "Messages";
+
 
 
 
