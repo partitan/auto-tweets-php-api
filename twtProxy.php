@@ -14,7 +14,7 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 echo $tweet->post('direct_messages/new', array('screen_name' => 'krungthepppCXP', 'text' => 'Hell ha wrrrrrrr......'));
 // New Tweet message
-echo "Messages";
+//echo "Messages";
 
 
 
