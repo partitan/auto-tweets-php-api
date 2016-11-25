@@ -20,9 +20,9 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 	$a = json_decode($cxpReply, true);
 //echo $cxpReply
-	//print_r($a);
-foreach ($a as $key => $user) {
-echo "Key=" . $key . ", Value=" . $user;
+	print_r($a);
+//foreach ($a as $key => $user) {
+//echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
-}
+//}
 
