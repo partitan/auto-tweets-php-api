@@ -1,6 +1,6 @@
 <?php
 //Twitter API
-echo "Twitter API test";
+//echo "Twitter API test";
 //Twitter APP
 $consumerKey    = 'LwjDAci8dZKpho1QhnV2PF6DN';
 $consumerSecret = 'TCWqkK073gt4grLCUilslRmS5NRoHvYJUMQuiCPIu6FNfMHzBC';
@@ -14,12 +14,14 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
-echo $tweet->get('direct_messages', array('count' => 1));
+$tweet->get('direct_messages', array('count' => 1));
+$cpontent = $tweet->get('direct_messages', array('count' => 1));
 //echo $tweet->get('statuses/show', array('id' => '240136858829479936'));
-sleep(2);
+echo $content,
+//sleep(2);
 
 //statuses/show
 
 
 
-echo " OK !!!";
+//echo " OK !!!";
