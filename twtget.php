@@ -20,9 +20,9 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 1, 'include_entities' => false));
 	$a = json_decode($cxpReply, true);
 echo $a;
-//print_r($a)."<br>";
-//print_r(array_keys($a))."<br>";
-//print_r(array_keys($a,"0")."<br>";
+print_r($a)."<br>";
+print_r(array_keys($a))."<br>";
+print_r(array_keys($a,"0")."<br>";
 
 
 //$json = '{"foo-bar": 12345}';
