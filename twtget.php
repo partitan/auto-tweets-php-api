@@ -14,15 +14,16 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
-echo $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 1, 'include_entities' => false));
+//echo $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 1, 'include_entities' => false));
 
 
-//$cxpReply = $tweet-> get('direct_messages', array('count' => 1));
-//	$a = json_decode($cxpReply, true);
-//echo $cxpReply
-	//print_r($a);
-//print_r(array_keys($a));
-//print_r(array_keys($a,"0"));
+$cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 1, 'include_entities' => false));
+	$a = json_decode($cxpReply, true);
+echo $cxpReply
+print_r($a)."<br>";
+print_r(array_keys($a))."<br>";
+print_r(array_keys($a,"0")."<br>";);
+
 
 //$json = '{"foo-bar": 12345}';
 
