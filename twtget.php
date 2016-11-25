@@ -32,13 +32,13 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 //print $a->{'id'};
 //print $a->['id_str'];
 
-foreach ($a['id'] as $id) {
+foreach ($a['text'] as $textx) {
     
-       echo $id." Following user <br>";
+       echo $textx." Following user <br>";
         
     }
 //foreach ($a as $key => $user) {
 //echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
 //}
-
+echo "xxx";
