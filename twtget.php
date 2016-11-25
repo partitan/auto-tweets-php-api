@@ -22,7 +22,7 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 echo $cxpReply;
 print_r($a)."<br>";
 print_r(array_keys($a))."<br>";
-print_r(array_keys($a,"0")."<br>";);
+print_r(array_keys($a,"0")."<br>";
 
 
 //$json = '{"foo-bar": 12345}';
