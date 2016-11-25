@@ -19,10 +19,11 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 	$a = json_decode($cxpReply, true);
-
-foreach($a as $x => $x_value) {
-    echo "Key=" . $x . ", Value=" . $x_value;
-    echo "<br>";
-}
+//echo $cxpReply
+	print_r($a);
+//foreach($a as $x => $x_value) {
+  //  echo "Key=" . $x . ", Value=" . $x_value;
+  //  echo "<br>";
+//}
 
 
