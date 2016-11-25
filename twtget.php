@@ -33,7 +33,7 @@ $key = array_search('green', $array); // $key = 2;
 echo $key;
 echo "------";// output 8
 $key = array_search('red', $array);   // $key = 1;
-ech0 $key;
+echo $key;
 
 
 
