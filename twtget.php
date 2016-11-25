@@ -15,9 +15,13 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
 $tweet->get('direct_messages', array('count' => 1));
-$content = $tweet->get('direct_messages', array('count' => 1));
+$contentReply = file_get_contents('php://input');
+
+echo $contentReply
+
+//$content = $tweet->get('direct_messages', array('count' => 1));
 //echo $tweet->get('statuses/show', array('id' => '240136858829479936'));
-echo $content,
+//echo $content,
 //sleep(2);
 
 //statuses/show
