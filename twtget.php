@@ -14,7 +14,7 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
-echo $tweet-> get('direct_messages', array('count' => 1));
+echo $tweet-> get('direct_messages', array('count' => 1),array('include_entities') => false);
 
 
 //$cxpReply = $tweet-> get('direct_messages', array('count' => 1));
