@@ -21,8 +21,8 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 	$a = json_decode($cxpReply, true);
 //echo $cxpReply
 	//print_r($a);
-//print_r(array_keys($a));
-print_r(array_keys($a,"Array"));
+print_r(array_keys($a));
+print_r(array_keys($a,"0"));
 //foreach ($a as $key => $user) {
 //echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
