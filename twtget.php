@@ -36,11 +36,13 @@ print_r(array_keys($a));
 //echo $key;
 echo "------";// output 8
 
+print_r(array_values($a));
+
 //$key = array_search('red', $array);   // $key = 1;
 //echo $key;
 
 
-print_r ($a);
+//print_r ($a);
 
 
 
