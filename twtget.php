@@ -22,7 +22,7 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 //echo $cxpReply
 	//print_r($a);
 foreach ($a as $key => $user) {
-echo $user['screen_name']." Follow user vvvv <br>";
+echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
 }
 
