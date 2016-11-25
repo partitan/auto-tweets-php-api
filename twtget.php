@@ -27,13 +27,18 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 //echo count($a, COUNT_RECURSIVE);
 echo "------";// output 8
 //echo count($a); // output 2
-$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
+//$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
+$a = array ('a' => 'apple', 'b' => 'banana', 'c' => array ('x', 'y', 'z'));
 
-$key = array_search('green', $array); // $key = 2;
+
+$key = array_search('apple', $a); // $key = 2;
 echo $key;
 echo "------";// output 8
-$key = array_search('red', $array);   // $key = 1;
-echo $key;
+//$key = array_search('red', $array);   // $key = 1;
+//echo $key;
+
+
+print_r ($a);
 
 
 
