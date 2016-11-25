@@ -16,7 +16,7 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
 echo $tweet->get('direct_messages', array('count' => 1));
 //echo $tweet->get('statuses/show', array('id' => '240136858829479936'));
-sleep(5)
+sleep(2);
 
 //statuses/show
 
