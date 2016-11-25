@@ -14,11 +14,11 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
-//echo $tweet-> get('direct_messages', array('count' => 1));
+echo $tweet-> get('direct_messages', array('count' => 1));
 
 
-$cxpReply = $tweet-> get('direct_messages', array('count' => 1));
-	$a = json_decode($cxpReply, true);
+//$cxpReply = $tweet-> get('direct_messages', array('count' => 1));
+//	$a = json_decode($cxpReply, true);
 //echo $cxpReply
 	//print_r($a);
 //print_r(array_keys($a));
@@ -32,13 +32,13 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 //print $a->{'id'};
 //print $a->['id_str'];
 
-foreach ($a['text'] as $textx) {
+//foreach ($a['text'] as $textx) {
     
-       echo $textx." Following user <br>";
+  //     echo $textx." Following user <br>";
         
-    }
+    //}
 //foreach ($a as $key => $user) {
 //echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
 //}
-echo "xxx";
+//echo "xxx";
