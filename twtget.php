@@ -21,8 +21,13 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 	$a = json_decode($cxpReply, true);
 //echo $a;
 //print_r($a)."<br>";
-print_r(array_keys($a));
-//print_r(array_keys($a,"0")."<br>";
+//print_r(array_keys($a));
+print_r(array_keys($a,"0");
+echo "------";// output 8
+echo count($a, COUNT_RECURSIVE);
+echo "------";// output 8
+echo count($a); // output 2
+
 
 
 //$json = '{"foo-bar": 12345}';
