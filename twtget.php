@@ -21,13 +21,16 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 	$a = json_decode($cxpReply, true);
 //echo $cxpReply
 	//print_r($a);
-print_r(array_keys($a));
-print_r(array_keys($a,"0"));
+//print_r(array_keys($a));
+//print_r(array_keys($a,"0"));
 
-echo $a[0][0].": In stock: ".$a[0][1].", sold: ".$a[0][2].".<br>";
-echo $a[1][0].": In stock: ".$a[1][1].", sold: ".$a[1][2].".<br>";
-echo $a[2][0].": In stock: ".$a[2][1].", sold: ".$a[2][2].".<br>";
-echo $a[3][0].": In stock: ".$a[3][1].", sold: ".$a[3][2].".<br>";
+//$json = '{"foo-bar": 12345}';
+
+//$obj = json_decode($json);
+//"text":"Welgum"
+print $a->{'text'}; // 12345
+print $a->{'id'};
+print $a->['id_str'];
 //foreach ($a as $key => $user) {
 //echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
