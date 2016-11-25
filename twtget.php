@@ -20,13 +20,18 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 1, 'include_entities' => false));
 	$a = json_decode($cxpReply, true);
 //echo $a;
-print_r($a);
+//---------->>>>>>>>>>>>>>>>>>>>>>>>>>print_r($a);
 //print_r(array_keys($a));
 //print_r(array_keys($a,"0");
+//echo "------";// output 8
+//echo count($a, COUNT_RECURSIVE);
 echo "------";// output 8
-echo count($a, COUNT_RECURSIVE);
+//echo count($a); // output 2
+$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
+
+$key = array_search('green', $array); // $key = 2;
 echo "------";// output 8
-echo count($a); // output 2
+$key = array_search('red', $array);   // $key = 1;
 
 
 
