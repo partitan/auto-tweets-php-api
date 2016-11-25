@@ -23,6 +23,11 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 	//print_r($a);
 print_r(array_keys($a));
 print_r(array_keys($a,"0"));
+
+echo $a[0][0].": In stock: ".$a[0][1].", sold: ".$a[0][2].".<br>";
+echo $a[1][0].": In stock: ".$a[1][1].", sold: ".$a[1][2].".<br>";
+echo $a[2][0].": In stock: ".$a[2][1].", sold: ".$a[2][2].".<br>";
+echo $a[3][0].": In stock: ".$a[3][1].", sold: ".$a[3][2].".<br>";
 //foreach ($a as $key => $user) {
 //echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
