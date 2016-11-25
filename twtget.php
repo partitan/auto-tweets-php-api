@@ -15,20 +15,14 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
 echo $tweet-> get('direct_messages', array('count' => 1));
-//$contentReply = file_get_contents($tweet);
-
-//$events = json_decode($contentReply, true);
 
 
-//echo $contentReply
+$cxpReply = $tweet-> get('direct_messages', array('count' => 1));
+	$a = json_decode($cxpReply, true);
 
-//$content = $tweet->get('direct_messages', array('count' => 1));
-//echo $tweet->get('statuses/show', array('id' => '240136858829479936'));
-//echo $content,
-//sleep(2);
-
-//statuses/show
-
+foreach($a as $x => $x_value) {
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
 
 
-//echo " OK !!!";
