@@ -28,9 +28,15 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1));
 
 //$obj = json_decode($json);
 //"text":"Welgum"
-print $a->{'text'}; // 12345
-print $a->{'id'};
-print $a->['id_str'];
+//print $a->{'text'}; // 12345
+//print $a->{'id'};
+//print $a->['id_str'];
+
+foreach ($a['id'] as $id) {
+    
+       echo $id." Following user <br>";
+        
+    }
 //foreach ($a as $key => $user) {
 //echo "Key=" . $key . ", Value=" . $user;
 //$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
