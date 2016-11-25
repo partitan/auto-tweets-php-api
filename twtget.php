@@ -8,7 +8,15 @@ $oAuthToken     = '747679427291676673-vuIY9VA4WL1e0t0kBkqL5P4uF3S4GHZ';
 $oAuthSecret    = 'NUqaIFUzx5iiPkMsqlEvzhJe3hrO1JXxLQ2mwvYX36gph';
 require_once('twitteroauth.php');
 $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecret);
+//$tweet->post('direct_messages/new', array('screen_name' => 'prungkrae', 'text' => 'welcome message from Proxy'));
+//$tweet->post('direct_messages/new', array('screen_name' => 'prungkrae', 'text' => 'welcome message from Proxy : timestamp',time()));
+// New Tweet message
 
-echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
+
+//echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
+echo $tweet->get('direct_messages', array('max_id' => '484424899', 'count'=> 5));
 
 
+
+
+//echo " msg sent !!!";
