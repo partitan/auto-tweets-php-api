@@ -15,7 +15,10 @@ $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecr
 
 //echo $tweet->get('followers/ids', array('screen_name' => 'prungkrae', 'count'=> 5000));
 $tweet->get('direct_messages', array('count' => 1));
-$contentReply = file_get_contents('php://input');
+$contentReply = file_get_contents($tweet);
+
+//$events = json_decode($contentReply, true);
+
 
 echo $contentReply
 
