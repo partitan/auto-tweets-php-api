@@ -30,8 +30,10 @@ echo "------";// output 8
 $array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
 
 $key = array_search('green', $array); // $key = 2;
+echo $key;
 echo "------";// output 8
 $key = array_search('red', $array);   // $key = 1;
+ech0 $key;
 
 
 
