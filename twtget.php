@@ -22,7 +22,7 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 //echo $a;
 //print_r($a)."<br>";
 //print_r(array_keys($a));
-print_r(array_keys($a,"0");
+//print_r(array_keys($a,"0");
 echo "------";// output 8
 echo count($a, COUNT_RECURSIVE);
 echo "------";// output 8
