@@ -38,6 +38,15 @@ $results = print_r($a, true);
 	//$cutstr = substr ( strpos( $results, "[text]" ) );
 	//echo $cutstr;
 	    
+	$pos = strpos( $results, "[text]" );
+if ($pos === false) {
+    echo "The string was not found in the string";
+} else {
+    echo "The string was found in the string";
+    echo " and exists at position $pos";
+}
+	    
+	    
      
     } else {
      
