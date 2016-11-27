@@ -65,7 +65,7 @@ echo "------/n---------/n";
 echo "------/n---------/n";
 //echo strlen ( "bamboolabcode" );
 
-echo substr ( "bamboolabcode", 3 );
+echo substr ( "bamboolabcode", 0, -10 );
 //echo substr ( "bamboolabcode");
 //echo stristr ( "BambooLabCode", "l" );
 
