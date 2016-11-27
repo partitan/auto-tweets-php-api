@@ -29,6 +29,7 @@ echo "------";// output 8
 
 $results = print_r($a, true);
 //echo $results;
+echo strlen ( $results );
 echo "------/n---------/n";
     $find = "[text]";
  $find2 = "[sender]";
