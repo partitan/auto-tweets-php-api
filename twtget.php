@@ -49,7 +49,7 @@ if ($pos === false) {
     //echo " and exists at position $pos ----- $pos1";
 	//echo "------/n---------/n";
 	//echo "------/n---------/n";
-	$textfound1 = substr ( $results, $pos );
+	$textfound1 = substr ( $results, $pos, $pos1 );
 	echo $textfound1;
 }
 	    
@@ -61,11 +61,11 @@ if ($pos === false) {
      
     }
 
-echo "------/n---------/n";
-echo "------/n---------/n";
+//echo "------/n---------/n";
+//echo "------/n---------/n";
 //echo strlen ( "bamboolabcode" );
 
-echo substr ( "bamboolabcode", 0, -10 );
+//echo substr ( "bamboolabcode", 0, -10 );
 //echo substr ( "bamboolabcode");
 //echo stristr ( "BambooLabCode", "l" );
 
