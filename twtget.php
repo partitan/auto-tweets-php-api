@@ -28,9 +28,10 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 echo "------";// output 8
 
 $results = print_r($a, true);
-echo $results;
+//echo $results;
 echo "------/n---------/n";
     $find = "[text]";
+ $find2 = "[sender]";
      
     if( strpos( $results, "[text]" )) {
      
@@ -39,11 +40,12 @@ echo "------/n---------/n";
 	//echo $cutstr;
 	    
 	$pos = strpos( $results, "[text]" );
+	$pos1 =  strpos( $results, "[sender]");
 if ($pos === false) {
     echo "The string was not found in the string";
 } else {
     echo "The string was found in the string";
-    echo " and exists at position $pos";
+    echo " and exists at position $pos ----- $pos1";
 }
 	    
 	    
