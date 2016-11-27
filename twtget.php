@@ -53,7 +53,11 @@ if ($pos === false) {
 	//echo $textfound1;
 	$lentxt = strlen($textfound1);
 	$pos2 = strpos( $textfound1, "[sender]");
-	echo "SENDER : $pos2 = ";
+	//echo "SENDER : $pos2";
+	$msgfound = substr ( $textfound1, 0, 129 );
+	echo $msgfound;
+	
+	
 	
 }
 	    
