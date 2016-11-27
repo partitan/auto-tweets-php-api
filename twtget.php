@@ -28,15 +28,15 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 echo "------";// output 8
 
 $results = print_r($a, true);
-echo $results;
+//echo $results;
 
     $find = "[text]";
      
     if( strpos( $results, "[text]" )) {
      
         echo "yes $find";
-	    $cutstr = substr ( strpos( $results, "[text]" ) );
-		echo $cutstr;
+	//$cutstr = substr ( strpos( $results, "[text]" ) );
+	//echo $cutstr;
 	    
      
     } else {
