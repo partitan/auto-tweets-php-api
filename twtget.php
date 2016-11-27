@@ -57,6 +57,12 @@ if ($pos === false) {
      
     }
 
+echo "------/n---------/n";
+echo "------/n---------/n";
+echo strlen ( "bamboolabcode" );
+echo substr ( "bamboolabcode", 6 );
+echo substr ( "bamboolabcode", -6 );
+//echo substr ( "bamboolabcode");
 
 
 //echo count($a); // output 2
