@@ -29,14 +29,14 @@ echo "------";// output 8
 
 $results = print_r($a, true);
 //echo $results;
-echo strlen ( $results );
-echo "------/n---------/n";
+//echo strlen ( $results );
+//echo "------/n---------/n";
     $find = "[text]";
  $find2 = "[sender]";
      
     if( strpos( $results, "[text]" )) {
      
-        echo "yes $find";
+       // echo "yes $find";
 	//$cutstr = substr ( strpos( $results, "[text]" ) );
 	//echo $cutstr;
 	    
@@ -45,11 +45,12 @@ echo "------/n---------/n";
 if ($pos === false) {
     echo "The string was not found in the string";
 } else {
-    echo "The string was found in the string";
-    echo " and exists at position $pos ----- $pos1";
-	echo "------/n---------/n";
-	echo "------/n---------/n";
-	echo substr ( $results, $pos );
+    //echo "The string was found in the string";
+    //echo " and exists at position $pos ----- $pos1";
+	//echo "------/n---------/n";
+	//echo "------/n---------/n";
+	$textfound1 = substr ( $results, $pos );
+	echo substr ( $textfound1, $pos1 );
 }
 	    
 	    
