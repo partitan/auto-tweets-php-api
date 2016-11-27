@@ -30,18 +30,19 @@ echo "------";// output 8
 $results = print_r($a, true);
 //echo $results;
 
-    $find = "[text]";
+   // $find = "[text]";
      
-    if( strpos( $results, "[text]" )) {
+    //if( strpos( $results, "[text]" )) {
      
-        echo "yes $find : $results";
+      //  echo "yes $find : $results";
      
-    } else {
+    //} else {
      
-        echo "no $find : $results";
+      //  echo "no $find : $results";
      
-    }
+    //}
 
+echo substr ( strpos( $results, "[text]" ) );
 
 //echo count($a); // output 2
 //$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
