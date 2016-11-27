@@ -28,7 +28,21 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 echo "------";// output 8
 
 $results = print_r($a, true);
-echo $results;
+//echo $results;
+
+    $find = "[text]";
+     
+    if( strpos( $results, "[text]" )) {
+     
+        echo "yes $find : $results";
+     
+    } else {
+     
+        echo "no $find : $results";
+     
+    }
+
+
 //echo count($a); // output 2
 //$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
 //$a = array ('a' => 'apple', 'b' => 'banana', 'c' => array ('x', 'y', 'z'));
