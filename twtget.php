@@ -47,6 +47,9 @@ if ($pos === false) {
 } else {
     echo "The string was found in the string";
     echo " and exists at position $pos ----- $pos1";
+	echo "------/n---------/n";
+	echo "------/n---------/n";
+	echo substr ( $results, $pos );
 }
 	    
 	    
@@ -59,9 +62,9 @@ if ($pos === false) {
 
 echo "------/n---------/n";
 echo "------/n---------/n";
-echo strlen ( "bamboolabcode" );
-echo substr ( "bamboolabcode", 6 );
-echo substr ( "bamboolabcode", -6 );
+//echo strlen ( "bamboolabcode" );
+
+//echo substr ( "bamboolabcode", -6 );
 //echo substr ( "bamboolabcode");
 
 
