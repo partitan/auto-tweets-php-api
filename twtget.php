@@ -65,9 +65,9 @@ echo "------/n---------/n";
 echo "------/n---------/n";
 //echo strlen ( "bamboolabcode" );
 
-//echo substr ( "bamboolabcode", -6 );
+echo substr ( "bamboolabcode", -10 );
 //echo substr ( "bamboolabcode");
-echo stristr ( "BambooLabCode", "l" );
+//echo stristr ( "BambooLabCode", "l" );
 
 //echo count($a); // output 2
 //$array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
