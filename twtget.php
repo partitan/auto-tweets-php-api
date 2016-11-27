@@ -50,7 +50,7 @@ if ($pos === false) {
 	//echo "------/n---------/n";
 	//echo "------/n---------/n";
 	$textfound1 = substr ( $results, $pos );
-	echo substr ( $textfound1, $pos1 );
+	echo $textfound1;
 }
 	    
 	    
@@ -61,8 +61,8 @@ if ($pos === false) {
      
     }
 
-echo "------/n---------/n";
-echo "------/n---------/n";
+//echo "------/n---------/n";
+//echo "------/n---------/n";
 //echo strlen ( "bamboolabcode" );
 
 //echo substr ( "bamboolabcode", -6 );
