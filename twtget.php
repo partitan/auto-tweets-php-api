@@ -52,7 +52,7 @@ if ($pos === false) {
 	$textfound1 = substr ( $results, $pos, $pos1 );
 	//echo $textfound1;
 	$lentxt = strlen($textfound1);
-	$pos2 = strpos( $lentxt, "[sender]");
+	$pos2 = strpos( $textfound1, "[sender]");
 	echo "SENDER : $pos2 = ";
 	
 }
