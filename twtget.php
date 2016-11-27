@@ -51,6 +51,7 @@ if ($pos === false) {
 	//echo "------/n---------/n";
 	$textfound1 = substr ( $results, $pos, $pos1 );
 	echo $textfound1;
+	echo strlen ( $textfound1 );
 }
 	    
 	    
