@@ -54,10 +54,8 @@ if ($pos === false) {
 	$lentxt = strlen($textfound1);
 	$pos2 = strpos( $textfound1, "[sender] =>");
 	//echo "SENDER : $pos2";
-	$msgfound = substr ( $textfound1, 0, 41 );
+	$msgfound = substr ( $textfound1, 0, $pos2 );
 	echo $msgfound;
-	
-	
 	
 }
 	    
