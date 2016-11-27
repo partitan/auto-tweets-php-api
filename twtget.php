@@ -25,9 +25,9 @@ $cxpReply = $tweet-> get('direct_messages', array('count' => 1,'skip_status' => 
 //print_r(array_keys($a,"0");
 //echo "------";// output 8
 //echo count($a, COUNT_RECURSIVE);
-echo "------";// output 8
+//echo "------";// output 8
 
-$results = print_r($a, true);
+$results = trim(print_r($a, true));
 //echo $results;
 //echo strlen ( $results );
 //echo "------/n---------/n";
