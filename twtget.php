@@ -51,7 +51,10 @@ if ($pos === false) {
 	//echo "------/n---------/n";
 	$textfound1 = substr ( $results, $pos, $pos1 );
 	//echo $textfound1;
-	echo strlen($textfound1);
+	$lentxt = strlen($textfound1);
+	$pos2 = strpos( $lentxt, "[sender]");
+	echo "SENDER : $pos2 = ";
+	
 }
 	    
 	    
