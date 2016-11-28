@@ -57,9 +57,9 @@ if ($pos === false) {
 	$msgfound = substr ( $textfound1, 0, $pos2 );
 	
 	//$lentxtx = strlen($msgfound),
-	$pos3 = strrpos( $msgfound, "[text] =>");
+	echo strrpos($msgfound, "[text] =>");
 	//$msgfoundx = substr ( $msgfound, $pos3);
-	echo $pos3
+	//echo $pos3
 	
 	//echo $msgfoundx;
 	
