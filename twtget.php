@@ -59,8 +59,11 @@ if ($pos === false) {
 	
 	//echo "------/n---------/n";
 	//echo "------/n---------/n";
-	$temp = "[text] => Thank you! Your ticket case no. is [731]. Goodbye!";
-	echo strstr ( $temp,"[text] =>");
+	//$temp = "[text] => Thank you! Your ticket case no. is [731]. Goodbye!";
+	//echo strstr ( $temp,"[text] =>");
+	
+	echo stripos ( "ManchesterUTD", "E", 0 );
+	
 	//$lentxtx = strlen($msgfound),
 	//echo strrpos($msgfound, "[text] =>");
 	//$msgfoundx = substr ( $msgfound, $pos3);
