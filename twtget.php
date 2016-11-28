@@ -61,7 +61,7 @@ if ($pos === false) {
 	//echo "------/n---------/n";
 	//$temp = "[text] => Thank you! Your ticket case no. is [731]. Goodbye!";
 	//echo strstr ( $temp,"[text] =>");
-	temp$ = "ManchesterUTD";
+	$temp = "ManchesterUTD";
 	//echo strpos ( $temp , "n", 0 );
 	$len1 = strlen($temp);
 	$xxx = strpos ( $temp , "n", 0 );
