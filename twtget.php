@@ -65,7 +65,7 @@ if ($pos === false) {
 	//echo strpos ( $temp , "n", 0 );
 	$len1 = strlen($temp);
 	$xxx = strpos ( $temp , "n", 0 );
-	$yyy = substr ( $temp, 0, $xxx);
+	$yyy = substr ( $temp, $xxx);
 	echo $yyy;
 	
 	//$lentxtx = strlen($msgfound),
