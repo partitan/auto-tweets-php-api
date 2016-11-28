@@ -55,10 +55,12 @@ if ($pos === false) {
 	$pos2 = strpos( $textfound1, "[sender] =>");
 	//echo "SENDER : $pos2";
 	$msgfound = substr ( $textfound1, 0, $pos2 );
-	echo $msgfound;
+	//echo $msgfound;
 	
-	echo "------/n---------/n";
-	echo "------/n---------/n";
+	//echo "------/n---------/n";
+	//echo "------/n---------/n";
+	$temp = "[text] => Thank you! Your ticket case no. is [731]. Goodbye!";
+	echo strstr ( $temp,"[text] =>");
 	//$lentxtx = strlen($msgfound),
 	//echo strrpos($msgfound, "[text] =>");
 	//$msgfoundx = substr ( $msgfound, $pos3);
